@@ -43,7 +43,7 @@ zuul:
     policies:
       cunsumer:
         limit: 100
-        quota: 2000
+        quota: 1000
         refresh-interval: 60
         type:
         - ORIGIN
