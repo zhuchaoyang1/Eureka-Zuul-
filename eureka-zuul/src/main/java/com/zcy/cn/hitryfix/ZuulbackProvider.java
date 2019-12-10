@@ -14,6 +14,7 @@ import java.io.InputStream;
 
 /**
  * 网关服务降级
+ * 服务报错或找不到
  */
 @Slf4j
 @Component
@@ -53,7 +54,7 @@ public class ZuulbackProvider implements FallbackProvider {
             @Override
             public InputStream getBody() throws IOException {
                 // 设置降级信息
-                String msg = "fallback:" + route;
+                String msg = "当前服务升级中导致不可用，模块名称:" + route;
                 return new ByteArrayInputStream(msg.getBytes());
             }
 
