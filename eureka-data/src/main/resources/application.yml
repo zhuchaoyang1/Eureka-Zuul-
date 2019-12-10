@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: provider-one
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    timeout: 20000
+
+myeureka:
+  server:
+    localhost
+  port:
+    8761
+
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://${myeureka.server}:${myeureka.port}/eureka/
+
+server:
+  port: 8762

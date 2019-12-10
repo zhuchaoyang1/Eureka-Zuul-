@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-consumer" />
+        <module name="eureka-data" />
+        <module name="eureka-login" />
         <module name="eureka-server" />
         <module name="eureka-zuul" />
-        <module name="eurka-producer" />
-        <module name="information-safety" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

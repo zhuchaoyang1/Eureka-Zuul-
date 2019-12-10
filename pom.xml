@@ -7,12 +7,14 @@
     <groupId>com.zcy.cn</groupId>
     <artifactId>information-safety</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <modules>
         <module>eureka-server</module>
-        <module>eurka-producer</module>
+        <module>eureka-data</module>
         <module>eureka-consumer</module>
         <module>eureka-zuul</module>
+        <module>eureka-login</module>
     </modules>
 
 

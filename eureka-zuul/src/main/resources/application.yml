@@ -32,12 +32,16 @@ zuul:
     cunsumer:
       serviceId: cunsumer
       path: /zhuchaoyang/**
+    login:
+      serviceId: login
+      path: /login/**
+
   ratelimit:
     enabled: true
     repository: IN_MEMORY
     policies:
       cunsumer:
-        limit: 10
+        limit: 100
         quota: 2
         refresh-interval: 60
         type:

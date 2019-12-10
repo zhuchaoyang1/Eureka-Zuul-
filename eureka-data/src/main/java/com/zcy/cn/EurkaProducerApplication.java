@@ -2,15 +2,16 @@ package com.zcy.cn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class EurekaConsumerApplication {
+@EnableCaching
+public class EurkaProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaConsumerApplication.class, args);
+        SpringApplication.run(EurkaProducerApplication.class, args);
     }
 
 }

@@ -4,11 +4,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/eurka-producer/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
