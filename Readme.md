@@ -1,0 +1,1 @@
+![avatar](/images/picture.jpg)
