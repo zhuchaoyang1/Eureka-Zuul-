@@ -7,7 +7,6 @@ import com.nimbusds.jose.JOSEException;
 import com.zcy.cn.jwt.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONObject;
-import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
