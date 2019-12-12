@@ -23,7 +23,7 @@ $\color{rgb(255,255,0)}{注：在调用下列除Login接口之外的所有接口
     测试方法：
     使用Postman对接口：```localhost:8764/zhuchaoyang/admin/info```发送120次
     发现结果如下：100次因为401身份认证错误（至少说明请求进Broker了 没有被限流操作）而剩下的20次
-    则被限流不可进入Broker中
+    则被限流不可进入Broker中    
     效果图：  
     ![avatar](/images/限流.jpg)
     
