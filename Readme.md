@@ -20,10 +20,12 @@ $\color{rgb(255,255,0)}{注：在调用下列除Login接口之外的所有接口
 - 限流测试  
     网关对同一个IP设置了一个窗口期内不能超过100次访问接口以及
     一个窗口期不能超过1000秒的响应时间```本项目中一个窗口期设置为60秒```  
-    测试方法：首先使用Postman调用登录接口```localhost:8764/login/user/login```
-    复制返回的Token，请求接口：```localhost:8764/zhuchaoyang/admin/info```
-    并将上述的Token以Key为token放入该请求的Header中。
-    使用Postman连续调用上述第二个请求120次会发现只有一百次成功剩下的失败。
+    测试方法：
+    使用Postman对接口：```localhost:8764/zhuchaoyang/admin/info```发送120次
+    发现结果如下：100次因为401身份认证错误（至少说明请求进Broker了 没有被限流操作）而剩下的20次
+    则被限流不可进入Broker中
+    效果图：  
+    ![avatar](/images/限流.jpg)
     
 - 重试机制测试  
     Zuul Ribbon开启之后又默认的ConnectionTime和ReadTime，当通过Zuul请求
