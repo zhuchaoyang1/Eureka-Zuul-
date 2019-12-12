@@ -1,20 +1,20 @@
-#Eurake+Zuul+Feign架构  
-#项目特点  
+# Eurake+Zuul+Feign架构  
+## 项目特点  
 - 分布式
 - 限流
 - 重试机制
 - 服务降级
 - Token令牌
 
-#架构图  
+## 架构图  
 ![avatar](/images/picture.jpg)
 
-#测试效果  
+## 测试效果  
 $\color{rgb(255,255,0)}{注：在调用下列除Login接口之外的所有接口都需要先调用Login接口并将Token值放入请求体Header中}$
 - 网关屏蔽原服务统一服务名测试  
     - 原始微服务：Consumer通过Postman访问不到
-    如接口：http://localhost:8764/consumer/admin/info需要通过
-    http://localhost:8764/zhuchaoyang/admin/info才可访问  
+    如接口：```http://localhost:8764/consumer/admin/info```需要通过
+    ```http://localhost:8764/zhuchaoyang/admin/info```才可访问  
     好处：屏蔽原始服务名
     
 - 限流测试  
