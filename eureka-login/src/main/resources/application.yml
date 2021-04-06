@@ -18,6 +18,19 @@ spring:
   application:
     name: login
 
+#Feign已经内置了Hystrix 但是需要手动的开启  这个地方没有配置Ribbon以及重置hystrix的超时时间而采用默认的时间
 feign:
   hystrix:
     enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000
+
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 6000

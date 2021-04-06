@@ -41,14 +41,29 @@ zuul:
     enabled: true
     repository: IN_MEMORY
     policies:
+      # 下述的配置表示：在一个窗口期60秒中允许按照IP进行限流，可以接受100次请求，并且100次请求的总时间不能超过1000秒
       cunsumer:
         limit: 100
-        quota: 1000
-        refresh-interval: 60
+        quota: 1000           # 当前单位为秒
+        refresh-interval: 60  # 当前单位为秒
         type:
         - ORIGIN
   retryable: true
 
+# 重试次数：
+# MaxAutoRetries表示访问服务集群下原节点（同路径访问）其中重试次数不包括首次；
+# MaxAutoRetriesNextServer表示访问服务集群下其余节点（换台服务器）
+# 因为没有配置服务提供者集群，因此这里只针对自己服务进行三次重试
 ribbon:
   MaxAutoRetries: 3
   MaxAutoRetriesNextServer: 0
+
+# hystrix超时时间设置  该节点待测试
+# 线程池隔离，默认超时时间1000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000

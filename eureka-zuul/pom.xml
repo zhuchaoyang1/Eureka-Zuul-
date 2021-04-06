@@ -39,6 +39,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
+        <!--
+            Zuul配置限流服务POM
+            如果不用该Jar自己可以手写一个令牌桶来实现限流 在[掘金]中有相关的记录
+         -->
         <dependency>
             <groupId>com.marcosbarbero.cloud</groupId>
             <artifactId>spring-cloud-zuul-ratelimit</artifactId>

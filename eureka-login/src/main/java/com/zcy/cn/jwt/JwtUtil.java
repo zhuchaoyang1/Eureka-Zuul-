@@ -2,13 +2,9 @@ package com.zcy.cn.jwt;
 
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
-import com.nimbusds.jose.crypto.MACVerifier;
 import net.minidev.json.JSONObject;
 import org.springframework.stereotype.Component;
 
-import java.text.ParseException;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 /**

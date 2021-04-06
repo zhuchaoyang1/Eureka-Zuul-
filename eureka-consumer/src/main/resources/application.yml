@@ -4,19 +4,20 @@ myeureka:
   port:
     8761
 
-eureka:
-  instance:
-    preferIpAddress: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-  client:
-    serviceUrl:
-      defaultZone: http://${myeureka.server}:${myeureka.port}/eureka/
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${myeureka.server}:${myeureka.port}/eureka/
 server:
   port: 8763
 
 spring:
   application:
     name: cunsumer
-feign:
-  hystrix:
-    enabled: true
+
+#feign:
+#  hystrix:
+#    enabled: true

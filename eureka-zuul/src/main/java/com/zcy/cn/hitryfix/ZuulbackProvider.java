@@ -13,8 +13,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * ZUUL集成了Ribbon和Hystrix
  * 网关服务降级
  * 服务报错或找不到
+ *
+ * 总结：Zuul组件只针对TIME_OUT进行服务降级，因为Zuul无法判断服务返回的Error是否是前端需要的，因此不会拦截
+ * 这样一来，如果FeignClient对服务进行服务降级之后，Zuul不会再对其进行服务降级了，两者的服务降级不会产生冲突
  */
 @Slf4j
 @Component
